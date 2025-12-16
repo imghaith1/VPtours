@@ -418,3 +418,14 @@ iframe {
     margin-bottom: 5px;
     font-size: 1.1em;
 }
+
+/* Google Maps */
+.map-container iframe {
+    width: 100%;       
+    max-width: 800px;  
+    height: 400px;   
+    border-radius: 10px; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+    display: block;
+    margin: 20px auto; 
+}

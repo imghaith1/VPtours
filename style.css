@@ -1,0 +1,427 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap');
+
+/* --- VARIABLES DE COULEURS (Thème Maroc) --- */
+:root {
+    --primary-color: #d35400;
+    --secondary-color: #2c3e50;
+    --bg-color: #fdfbf7;
+    --text-color: #333;
+    --white: #ffffff;
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* nav bar */
+header {
+    background-color: var(--secondary-color);
+    padding: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* --- STYLE DU LOGO --- */
+.logo-container {
+    text-align: center;
+    /* On centre le logo */
+    padding-top: 15px;
+    background-color: var(--secondary-color);
+    /* Même fond que le header */
+}
+
+.main-logo {
+    height: 80px;
+    /* On limite la hauteur pour pas qu'il soit énorme */
+    width: auto;
+    /* La largeur s'adapte toute seule */
+    transition: transform 0.3s ease;
+}
+
+.main-logo:hover {
+    transform: scale(1.1);
+    /* Petit effet de zoom quand on passe la souris dessus */
+}
+
+/* Ajustement du menu pour qu'il colle bien au logo */
+nav ul {
+    padding-top: 10px;
+    /* Un peu d'espace entre le logo et le texte */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 15px 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--white);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+/* Bouton Inscription */
+.btn-inscription {
+    background-color: var(--primary-color);
+    padding: 8px 20px;
+    border-radius: 25px;
+    color: white !important;
+}
+
+.btn-inscription:hover {
+    background-color: #e67e22;
+    transform: scale(1.05);
+}
+
+/* Bannière  */
+
+.hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('fond.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    color: white;
+}
+
+.hero h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.9);
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    font-weight: 600;
+    max-width: 800px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
+    margin-top: 0;
+}
+
+/* Images */
+.destination-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.card {
+    background-color: white;
+    width: 30%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.card h3 {
+    color: var(--primary-color);
+    margin: 15px 0 5px 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.card p {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+.card a {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: white;
+    text-decoration: none;
+    padding: 10px 25px;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.card a:hover {
+    background-color: var(--primary-color);
+}
+
+/* Images tel*/
+@media screen and (max-width: 768px) {
+    .card {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+
+/*  body  */
+main {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--secondary-color);
+}
+
+/* Formulaire */
+.form-wrapper {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin-bottom: 25px;
+}
+
+legend {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
+/* Nom et Prénom à côté */
+.form-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    flex: 1;
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+    background-color: #f9f9f9;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    background-color: white;
+    box-shadow: 0 0 5px rgba(211, 84, 0, 0.2);
+}
+
+/* Style des radio */
+.radiogroup {
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 6px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+/* Boutons de fin */
+.button-group {
+    text-align: center;
+    margin-top: 30px;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+input[type="submit"] {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+input[type="reset"] {
+    background-color: transparent;
+    color: #777;
+    margin-left: 10px;
+}
+
+input[type="reset"]:hover {
+    text-decoration: underline;
+    color: #333;
+}
+
+@media screen and (max-width: 768px) {
+
+    /* Lignes en colonne */
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    /* Menu vertical */
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    /* Réduire la taille du titre */
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .form-wrapper {
+        padding: 20px;
+    }
+}
+
+/* caroussel - */
+
+.carousel-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    position: relative;
+}
+
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.carousel img {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    scroll-snap-align: center;
+}
+
+.legende {
+    text-align: center;
+    color: #666;
+    font-size: 0.9rem;
+    margin-top: 8px;
+    font-style: italic;
+}
+
+/* Vidéos  */
+iframe {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: block;
+    margin: 0 auto;
+}
+
+/* Listes d'activités */
+.activities-list {
+    list-style: none;
+    padding: 0;
+}
+
+.activities-list li {
+    background-color: white;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-left: 5px solid var(--primary-color);
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.activities-list strong {
+    color: var(--secondary-color);
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1.1em;
+}

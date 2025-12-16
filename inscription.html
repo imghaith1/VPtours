@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réserver votre voyage - VPTOURS</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="logo.png" alt="Logo VP Tours" class="main-logo">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="essaouira.html">Mer (Essaouira)</a></li>
+                <li><a href="ifrane.html">Montagne (Ifrane)</a></li>
+                <li><a href="merzouga.html">Désert (Merzouga)</a></li>
+                <li><a href="inscription.html" class="btn-inscription">Inscription</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="form-wrapper">
+            <div class="form-header">
+                <h1>Commencez l'Aventure</h1>
+                <p>Remplissez ce formulaire pour pré-réserver votre séjour de rêve.</p>
+            </div>
+
+            <form action="remerciement.html" method="post" enctype="multipart/form-data">
+
+                <fieldset>
+                    <legend>1. Vos Coordonnées</legend>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nom">Nom</label>
+                            <input type="text" id="nom" name="Nom" placeholder="Ex: Dupont" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="prenom">Prénom</label>
+                            <input type="text" id="prenom" name="Prenom" placeholder="Ex: Jean" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="mail">Email</label>
+                            <input type="email" id="mail" name="Mail" placeholder="jean.dupont@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="date_naissance">Date de naissance</label>
+                            <input type="date" id="date_naissance" name="Date_de_naissance" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Genre</label>
+                        <div class="radiogroup">
+                            <input type="radio" id="homme" name="Genre" value="homme">
+                            <label for="homme" style="margin:0; font-weight:normal;">Homme</label>
+
+                            <input type="radio" id="femme" name="Genre" value="femme">
+                            <label for="femme" style="margin:0; font-weight:normal;">Femme</label>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>2. Votre Voyage</legend>
+                    <div class="form-group">
+                        <label for="pays">Quelle expérience recherchez-vous ?</label>
+                        <select id="pays" name="pays">
+                            <option value="" disabled selected>Choisissez votre destination</option>
+                            <optgroup label="Nos Coups de Cœur Maroc">
+                                <option value="essaouira">Essaouira - Douceur Océane</option>
+                                <option value="ifrane">Ifrane - Fraîcheur de l'Atlas</option>
+                                <option value="merzouga">Merzouga - Magie du Désert</option>
+                            </optgroup>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="commentaire">Vos envies particulières / Infos importantes </label>
+                        <textarea id="commentaire" name="commentaire" rows="4"
+                            placeholder="Allergies, chambre vue mer, guide privé..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="fichier">Documents (Passeport/Carte d'identité)</label>
+                        <input type="file" id="fichier" name="fichier" required accept="image/png, image/jpeg">
+                        <input type="hidden" name="MAX_FILE_SIZE" value="10240">
+                    </div>
+                </fieldset>
+
+                <div class="button-group">
+                    <input type="submit" value="VALIDER MA DEMANDE">
+                    <input type="reset" value="Effacer">
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p style="text-align: center; margin-top: 20px;">&copy; 2025 VPTOURS - Ilies M'ghaith</p>
+    </footer>
+
+</body>
+
+</html>
